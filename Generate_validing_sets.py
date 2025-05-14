@@ -226,9 +226,9 @@ for group_key, group_df in grouped:
                               group_df.iloc[0]["descriptive_path"])
     image3D = dcmread_image(fp=image_path, view=view)
     image_rgb = np.array([
-        image3D[slice_index - 3],
+        image3D[slice_index - 1],
         image3D[slice_index],
-        image3D[slice_index + 3]
+        image3D[slice_index + 1]
     ])
     del image3D
     gc.collect()
