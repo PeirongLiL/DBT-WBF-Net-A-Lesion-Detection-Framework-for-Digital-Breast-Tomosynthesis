@@ -85,10 +85,7 @@ def dbt_wbf(df, iou_threshold=0.1, distance_threshold=0, score_threshold=0.001):
             # 使用基于z轴距离的加权平均
             total_weight_s = 0.0
             weighted_score_sum = 0.0
-            max_value = 0.0
             for i in overlapping_indices:
-                if scores[i] >= max_value:
-                    max_value = scores[i]
                 z_diff = abs(z[current] - z[i])
 
                 # 计算权重，z_diff 越小权重越大
@@ -98,10 +95,10 @@ def dbt_wbf(df, iou_threshold=0.1, distance_threshold=0, score_threshold=0.001):
 
 
 
-            mean_score = max_value
+            mean_score = weighted_score_sum / total_weight_s
 
             # weight_n = min(0.7 + len(overlapping_indices) * 0.02, 1.3)
-            weight_n=1
+            weight_n=len(overlapping_indices)/z_t
             combined_score = mean_score * weight_n
             keep.append(current)
             score_weights.append(combined_score)
