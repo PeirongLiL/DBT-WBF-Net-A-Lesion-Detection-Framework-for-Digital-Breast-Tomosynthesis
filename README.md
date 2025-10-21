@@ -1,4 +1,4 @@
-# DBT-WBF-Net-A-Lesion-Detection-Framework-for-Digital-Breast-Tomosynthesis
+# Enhanced Mass and Architectural Distortion Detection in Digital Breast Tomosynthesis via Cross-Slice Weighted Box Fusion
 
 This repository contains the codebase for the breast cancer detection and evaluation framework presented in our paper. It utilizes YOLOv8 for detection and incorporates a Detection Box Fusion method (DBT_WBF) proposed in the study to enhance final prediction results. The framework includes dataset preparation, training, evaluation using AUC and FROC metrics, and fusion of model outputs.
 
