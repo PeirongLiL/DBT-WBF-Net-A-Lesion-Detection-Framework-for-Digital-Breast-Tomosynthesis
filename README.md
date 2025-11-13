@@ -1,6 +1,6 @@
 # Enhanced Mass and Architectural Distortion Detection in Digital Breast Tomosynthesis via Cross-Slice Weighted Box Fusion
 
-This repository contains the codebase for the breast cancer detection and evaluation framework presented in our paper. It utilizes YOLOv8 for detection and incorporates a Detection Box Fusion method (DBT_WBF) proposed in the study to enhance final prediction results. The framework includes dataset preparation, training, evaluation using AUC and FROC metrics, and fusion of model outputs.
+This repository contains the codebase for the breast cancer detection and evaluation framework presented in our paper (Li, P., Li, X., Shi, P. (2026). DBT-WBF: A Weighted Boxes Fusion Model for Improving Breast Cancer Detection in DBT. Smart Innovation, Systems and Technologies, vol 444. Springer, Singapore. https://doi.org/10.1007/978-981-96-7273-8_23). It utilizes YOLOv8 for detection and incorporates a Detection Box Fusion method (DBT_WBF) proposed in the study to enhance final prediction results. The framework includes dataset preparation, training, evaluation using AUC and FROC metrics, and fusion of model outputs.
 
 config.py -- Contains configuration settings and parameters for training and inference using YOLOv8. We trained YOLO using the mmdet library (https://mmyolo.readthedocs.io/zh-cn/latest/).
 
